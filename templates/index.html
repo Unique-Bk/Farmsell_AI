@@ -1,127 +1,512 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>FarmSell AI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FarmSell AI | Smart Agricultural Selling</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet"
-          href="{{ url_for('static',
-          filename='style.css') }}">
+        href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-<header>
-    <h1>🌾 FarmSell AI</h1>
-    <p>Smart Selling Decisions for Farmers</p>
-</header>
+    <!-- Background decoration -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
 
+    <!-- NAVBAR -->
+    <nav class="navbar">
 
-<div class="container">
+        <div class="logo-area">
 
-    <div class="card">
+            <div class="logo-icon">
+                🌱
+            </div>
 
-        <h2>Enter Farm Details</h2>
+            <div>
+                <div class="logo">
+                    FarmSell <span>AI</span>
+                </div>
 
-        <label>Crop</label>
+                <div class="tagline">
+                    Smart Selling Decisions
+                </div>
+            </div>
 
-        <select id="crop">
-
-            <option value="Wheat">
-                Wheat
-            </option>
-
-            <option value="Rice">
-                Rice
-            </option>
-
-            <option value="Potato">
-                Potato
-            </option>
-
-        </select>
-
-
-        <label>Month</label>
-
-        <input
-            type="number"
-            id="month"
-            min="1"
-            max="12"
-            value="3"
-        >
-
-
-        <label>Market</label>
-
-        <select id="market">
-
-            <option value="Meerut">
-                Meerut
-            </option>
-
-            <option value="Muzaffarnagar">
-                Muzaffarnagar
-            </option>
-
-            <option value="Delhi">
-                Delhi
-            </option>
-
-        </select>
-
-
-        <label>Quantity (quintals)</label>
-
-        <input
-            type="number"
-            id="quantity"
-            value="20"
-        >
-
-
-        <label>Temperature (°C)</label>
-
-        <input
-            type="number"
-            id="temperature"
-            value="25"
-        >
-
-
-        <label>Rainfall (mm)</label>
-
-        <input
-            type="number"
-            id="rainfall"
-            value="50"
-        >
-
-
-        <button onclick="predictPrice()">
-            🤖 Analyze Market
-        </button>
-
-    </div>
-
-
-    <div class="card result">
-
-        <h2>AI Result</h2>
-
-        <div id="result">
-            Enter your farm details
-            and click Analyze Market.
         </div>
 
-    </div>
 
-</div>
+        <div class="nav-links">
+
+            <a href="#" class="active">Home</a>
+            <a href="#features">Features</a>
+            <a href="#analyzer">Analyzer</a>
+            <a href="#about">About</a>
+
+        </div>
+
+    </nav>
 
 
-<script src="{{ url_for('static',
-filename='script.js') }}"></script>
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                ✨ AI-Powered Agriculture
+            </div>
+
+            <h1>
+                Sell Smarter.
+                <span>Earn Better.</span>
+            </h1>
+
+            <p>
+                FarmSell AI helps farmers analyze market prices,
+                transportation costs and expected returns to make
+                smarter selling decisions.
+            </p>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong>🤖 AI</strong>
+                    <small>Price Analysis</small>
+                </div>
+
+                <div>
+                    <strong>🏪 Markets</strong>
+                    <small>Comparison</small>
+                </div>
+
+                <div>
+                    <strong>💰 Returns</strong>
+                    <small>Calculation</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-art">
+
+            <div class="floating-card card-price">
+                📈
+                <div>
+                    <strong>Price Analysis</strong>
+                    <small>AI powered</small>
+                </div>
+            </div>
+
+            <div class="farm-illustration">
+
+                <div class="sun"></div>
+
+                <div class="mountain mountain-one"></div>
+                <div class="mountain mountain-two"></div>
+
+                <div class="field field-one"></div>
+                <div class="field field-two"></div>
+
+                <div class="plant plant-one">🌾</div>
+                <div class="plant plant-two">🌱</div>
+                <div class="plant plant-three">🌾</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+
+        <div class="section-heading">
+
+            <span>WHAT WE DO</span>
+
+            <h2>
+                Everything you need to
+                <span>sell smarter.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon purple">
+                    📈
+                </div>
+
+                <h3>Price Prediction</h3>
+
+                <p>
+                    Estimate future crop prices using
+                    machine-learning based analysis.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon green">
+                    🏪
+                </div>
+
+                <h3>Market Comparison</h3>
+
+                <p>
+                    Compare different markets and
+                    identify better selling opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon orange">
+                    🚚
+                </div>
+
+                <h3>Transport Cost</h3>
+
+                <p>
+                    Include transportation expenses
+                    when calculating your return.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon blue">
+                    💰
+                </div>
+
+                <h3>Net Return</h3>
+
+                <p>
+                    Understand your estimated earnings
+                    after important expenses.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ANALYZER -->
+    <section class="analyzer-section" id="analyzer">
+
+        <div class="analyzer-header">
+
+            <div>
+                <span>FARM ANALYZER</span>
+
+                <h2>
+                    Let's analyze your
+                    <strong>selling opportunity.</strong>
+                </h2>
+
+                <p>
+                    Enter your farm information and let
+                    FarmSell AI calculate the estimated
+                    market outcome.
+                </p>
+            </div>
+
+            <div class="ai-status">
+                <span class="status-dot"></span>
+                AI Engine Ready
+            </div>
+
+        </div>
+
+
+        <div class="dashboard">
+
+            <!-- FORM -->
+            <div class="panel form-panel">
+
+                <div class="panel-title">
+
+                    <div class="panel-icon">
+                        🌾
+                    </div>
+
+                    <div>
+                        <h3>Farm Details</h3>
+                        <p>Tell us about your crop</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label>
+                            🌾 Crop
+                        </label>
+
+                        <select id="crop">
+
+                            <option value="Wheat">
+                                Wheat
+                            </option>
+
+                            <option value="Rice">
+                                Rice
+                            </option>
+
+                            <option value="Potato">
+                                Potato
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            📅 Month
+                        </label>
+
+                        <select id="month">
+
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3" selected>March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group full">
+
+                        <label>
+                            📍 Market
+                        </label>
+
+                        <select id="market">
+
+                            <option value="Meerut">
+                                Meerut
+                            </option>
+
+                            <option value="Muzaffarnagar">
+                                Muzaffarnagar
+                            </option>
+
+                            <option value="Delhi">
+                                Delhi
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            ⚖️ Quantity
+                            <small>(quintals)</small>
+                        </label>
+
+                        <input
+                            type="number"
+                            id="quantity"
+                            value="20"
+                            min="1">
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            🌡️ Temperature
+                            <small>(°C)</small>
+                        </label>
+
+                        <input
+                            type="number"
+                            id="temperature"
+                            value="25">
+
+                    </div>
+
+
+                    <div class="input-group full">
+
+                        <label>
+                            🌧️ Rainfall
+                            <small>(mm)</small>
+                        </label>
+
+                        <input
+                            type="number"
+                            id="rainfall"
+                            value="50">
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="analyze-button"
+                    onclick="predictPrice()">
+
+                    <span>🤖</span>
+
+                    Analyze Market
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+                <div class="secure-note">
+                    🔒 Your information stays on this device
+                </div>
+
+            </div>
+
+
+            <!-- RESULT -->
+            <div class="panel result-panel">
+
+                <div class="panel-title">
+
+                    <div class="panel-icon result-icon">
+                        ✨
+                    </div>
+
+                    <div>
+                        <h3>AI Analysis</h3>
+                        <p>Estimated market outcome</p>
+                    </div>
+
+                </div>
+
+
+                <div id="result">
+
+                    <div class="empty-result">
+
+                        <div class="empty-icon">
+                            🌾
+                        </div>
+
+                        <h3>
+                            Ready to analyze
+                        </h3>
+
+                        <p>
+                            Enter your farm details
+                            and click <b>Analyze Market</b>
+                            to see your estimated results.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="about-card">
+
+            <div class="about-icon">
+                🌱
+            </div>
+
+            <div>
+
+                <span>OUR VISION</span>
+
+                <h2>
+                    Technology that works
+                    <span>for farmers.</span>
+                </h2>
+
+                <p>
+                    FarmSell AI is a student-built prototype
+                    exploring how artificial intelligence can
+                    help farmers make better-informed selling
+                    decisions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <div class="footer-logo">
+            🌱 FarmSell AI
+        </div>
+
+        <p>
+            Smart technology for smarter agricultural decisions.
+        </p>
+
+        <small>
+            Prototype Project • Built with Python & AI
+        </small>
+
+    </footer>
+
+
+    <script src="{{ url_for('static',
+        filename='script.js') }}"></script>
 
 </body>
 
